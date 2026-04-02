@@ -1,474 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roof Cleaning & Painting in Bremerton WA | SOS Painting Kitsap</title>
-  <meta name="description" content="SOS Painting Kitsap provides roof cleaning, painting, pressure washing, and exterior services across Bremerton, Silverdale, Poulsbo, and Kitsap County." />
-  <meta name="theme-color" content="#101010" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #616161;
-      --dark: #101010;
-      --accent: #ff6a00;
-      --green: #2f9e44;
-      --line: #e8e8e8;
-      --soft: #f6f6f6;
-      --max: 1100px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * { box-sizing: border-box; }
+<title>Roof Cleaning & Painting in Bremerton WA | SOS Painting Kitsap</title>
 
-    html { scroll-behavior: smooth; }
+<meta name="description" content="SOS Painting Kitsap provides roof cleaning, interior and exterior painting, exterior cleaning, and landscaping support across Bremerton, Silverdale, Poulsbo, and Kitsap County." />
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.55;
-    }
+<style>
+:root {
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --muted:#616161;
+  --dark:#101010;
+  --accent:#ff6a00;
+  --green:#2f9e44;
+  --line:#e8e8e8;
+  --soft:#f6f6f6;
+  --max:1120px;
+}
 
-    a { color: inherit; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Arial; color:var(--text); }
 
-    .container {
-      width: min(100% - 32px, var(--max));
-      margin: 0 auto;
-    }
+.container {
+  width:min(100% - 32px, var(--max));
+  margin:auto;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(16, 16, 16, 0.88);
-      backdrop-filter: blur(8px);
-      color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
+/* HEADER */
+header {
+  background:rgba(16,16,16,.88);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .topbar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 12px;
-      text-align: center;
-    }
+.topbar {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  text-align:center;
+}
 
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
+.brand { font-weight:700; font-size:1.2rem; }
+.small { font-size:.95rem; color:#ccc; }
 
-    .small {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+.top-actions {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    .top-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+/* BUTTONS */
+.btn {
+  padding:12px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 6px 18px rgba(0,0,0,0.2);
+  transition:.2s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      font-size: 1rem;
-    }
+.btn:hover { transform:translateY(-2px); }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    }
+.btn-primary { background:var(--accent); color:white; }
+.btn-secondary { background:var(--green); color:white; }
+.btn-light { background:white; color:black; }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
+/* HERO */
+.hero {
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color:white;
+  padding:90px 20px;
+}
 
-    .btn-secondary {
-      background: var(--green);
-      color: #fff;
-    }
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.3fr .9fr;
+  gap:30px;
+  align-items:center;
+}
 
-    .btn-light {
-      background: #fff;
-      color: var(--dark);
-    }
+.eyebrow {
+  text-transform:uppercase;
+  font-size:.85rem;
+  letter-spacing:.08em;
+  color:#ffd6b3;
+  font-weight:bold;
+}
 
-    .hero {
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
-        url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=80') center/cover;
-      color: #fff;
-      padding: 88px 0 72px;
-    }
+.hero h1 {
+  font-size:clamp(2.3rem,5vw,3.8rem);
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 30px;
-      align-items: center;
-    }
+.hero-points {
+  margin:20px 0;
+  display:grid;
+  gap:10px;
+}
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.85rem;
-      color: #ffd6b3;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
+.hero-card {
+  background:rgba(255,255,255,.1);
+  padding:24px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.2);
+}
 
-    h1, h2, h3 {
-      line-height: 1.15;
-      margin: 0 0 14px;
-    }
+/* SECTIONS */
+section { padding:70px 20px; }
 
-    h1 {
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      font-weight: 800;
-    }
+.section-lead {
+  color:var(--muted);
+  max-width:70ch;
+  margin-bottom:20px;
+}
 
-    h2 {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-    }
+/* GRIDS */
+.services,
+.trust-grid,
+.steps {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    h3 {
-      font-size: 1.2rem;
-    }
+/* CARDS */
+.card {
+  background:white;
+  padding:22px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.2s;
+}
 
-    .hero p {
-      font-size: 1.08rem;
-      color: #f1f1f1;
-      max-width: 62ch;
-    }
+.card:hover { transform:translateY(-5px); }
 
-    .hero-points {
-      display: grid;
-      gap: 10px;
-      margin: 22px 0 28px;
-      color: #f4f4f4;
-    }
+/* CONTACT */
+.soft { background:var(--soft); }
 
-    .hero-card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 14px;
-      padding: 24px;
-      backdrop-filter: blur(4px);
-    }
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
 
-    .hero-card ul {
-      margin: 12px 0 0;
-      padding-left: 20px;
-    }
+form {
+  background:white;
+  padding:22px;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
 
-    section {
-      padding: 72px 0;
-    }
+input, textarea {
+  width:100%;
+  padding:13px;
+  margin-bottom:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
 
-    .soft {
-      background: var(--soft);
-    }
+textarea { min-height:120px; }
 
-    .section-lead {
-      color: var(--muted);
-      max-width: 70ch;
-      margin-bottom: 28px;
-    }
+.contact-card {
+  background:var(--dark);
+  color:white;
+  padding:24px;
+  border-radius:12px;
+}
 
-    .services,
-    .trust-grid,
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+footer {
+  background:black;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
-    .card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
+/* FLOAT BUTTONS */
+.float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:999;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
-    }
+.float a {
+  padding:14px;
+  border-radius:50%;
+  font-size:20px;
+  color:white;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      align-items: start;
-    }
+.float .call { background:var(--accent); }
+.float .text { background:var(--green); }
 
-    form {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 22px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 13px 14px;
-      margin: 0 0 12px;
-      border-radius: 8px;
-      border: 1px solid #d6d6d6;
-      font: inherit;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .contact-card {
-      background: var(--dark);
-      color: #fff;
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    .contact-card p,
-    .contact-card li,
-    .contact-card a {
-      color: #ededed;
-    }
-
-    footer {
-      background: #0b0b0b;
-      color: #fff;
-      padding: 24px 0;
-      text-align: center;
-    }
-
-    .float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 999;
-    }
-
-    .float a {
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 24px;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .float .call {
-      background: var(--accent);
-    }
-
-    .float .text {
-      background: var(--green);
-    }
-
-    @media (max-width: 860px) {
-      .hero-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .float {
-        bottom: 16px;
-        right: 16px;
-      }
-
-      .float a {
-        width: 54px;
-        height: 54px;
-        font-size: 22px;
-      }
-    }
-  </style>
+/* MOBILE */
+@media (max-width:860px) {
+  .hero-grid,
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container topbar">
-      <div>
-        <div class="brand">SOS Painting Kitsap</div>
-        <div class="small" style="color:#d0d0d0;">Bremerton • Silverdale • Poulsbo • Kitsap County</div>
-      </div>
-      <div class="top-actions">
-        <a class="btn btn-primary" href="tel:3072584287">Call</a>
-        <a class="btn btn-secondary" href="sms:3072584287">Text</a>
-      </div>
+
+<header>
+  <div class="container topbar">
+    <div>
+      <div class="brand">SOS Painting Kitsap</div>
+      <div class="small">Bremerton • Silverdale • Poulsbo • Kitsap County</div>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Quality work. Done on time.</div>
-        <h1>Roof Cleaning & Painting in Bremerton, Silverdale & Kitsap County</h1>
-        <p>
-          Fast, reliable exterior services you can count on for homes and properties across Kitsap County.
-        </p>
-        <div class="hero-points">
-          <div>✔ Fast response for quotes and scheduling</div>
-          <div>✔ Clean professional work</div>
-          <div>✔ Reliable service and follow-through</div>
-        </div>
-        <div class="top-actions">
-          <a class="btn btn-primary" href="#quote">Get Quote</a>
-          <a class="btn btn-light" href="mailto:sospaintingkitsap@gmail.com">Email</a>
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <h3>Services</h3>
-        <ul>
-          <li>Interior and exterior painting</li>
-          <li>Roof cleaning</li>
-          <li>Exterior cleaning and pressure washing</li>
-          <li>Landscaping and curb-appeal support</li>
-        </ul>
-        <p style="margin-top:16px;">
-          Serving Bremerton, Silverdale, Poulsbo, and surrounding Kitsap County communities.
-        </p>
-      </aside>
+    <div class="top-actions">
+      <a href="tel:3072584287" class="btn btn-primary">Call</a>
+      <a href="sms:3072584287" class="btn btn-secondary">Text</a>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Services</h2>
-      <p class="section-lead">
-        Whether you need a house refreshed, a roof cleaned up, or exterior surfaces brought back to life,
-        we focus on dependable timing, solid work, and a smooth experience from quote to completion.
-      </p>
-      <div class="services">
-        <div class="card">
-          <h3>Painting</h3>
-          <p>Interior and exterior painting with clean prep, sharp finishes, and attention to detail.</p>
-        </div>
-        <div class="card">
-          <h3>Roof Cleaning</h3>
-          <p>Remove buildup, improve curb appeal, and keep your roof looking maintained.</p>
-        </div>
-        <div class="card">
-          <h3>Exterior Cleaning</h3>
-          <p>Siding, walkways, driveways, patios, and other exterior surfaces cleaned up and refreshed.</p>
-        </div>
-        <div class="card">
-          <h3>Landscaping Support</h3>
-          <p>Cleanup and curb-appeal work that helps properties look cared for and move-ready.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft">
-    <div class="container">
-      <h2>Why people choose us</h2>
-      <div class="trust-grid">
-        <div class="card">
-          <h3>Clear communication</h3>
-          <p>We keep things simple, responsive, and easy to understand from the first call onward.</p>
-        </div>
-        <div class="card">
-          <h3>Dependable timing</h3>
-          <p>We know homeowners and property managers need jobs completed without unnecessary delays.</p>
-        </div>
-        <div class="card">
-          <h3>Quality-focused work</h3>
-          <p>We care about clean results, professional presentation, and doing the job right.</p>
-        </div>
-        <div class="card">
-          <h3>Local service mindset</h3>
-          <p>We serve Kitsap County with a friendly, practical approach built around trust and follow-through.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="card">
-          <h3>1. Reach out</h3>
-          <p>Call, text, or send a quote request with the service you need and your location.</p>
-        </div>
-        <div class="card">
-          <h3>2. Get your quote</h3>
-          <p>We’ll review the job and follow up with next steps and pricing details.</p>
-        </div>
-        <div class="card">
-          <h3>3. Get it handled</h3>
-          <p>We show up ready to do clean, professional work and keep the process moving.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft" id="quote">
-    <div class="container contact-grid">
-      <div>
-        <h2>Get a free quote</h2>
-        <p class="section-lead">
-          Tell us what you need help with and the best way to reach you. We’ll follow up as quickly as we can.
-        </p>
-        <form action="https://formspree.io/f/mayvlzgn" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="tel" name="phone" placeholder="Phone number" required />
-          <input type="email" name="email" placeholder="Email address" />
-          <textarea name="message" placeholder="What service do you need help with?" required></textarea>
-          <button class="btn btn-primary" type="submit">Request My Quote</button>
-        </form>
-      </div>
-
-      <div class="contact-card">
-        <h3>Contact SOS Painting Kitsap</h3>
-        <p><strong>Call:</strong> <a href="tel:3072584287">(307) 258-4287</a></p>
-        <p><strong>Text:</strong> <a href="sms:3072584287">Start a text conversation</a></p>
-        <p><strong>Email:</strong> <a href="mailto:sospaintingkitsap@gmail.com">sospaintingkitsap@gmail.com</a></p>
-        <p><strong>Service area:</strong> Bremerton, Silverdale, Poulsbo, and surrounding Kitsap County communities.</p>
-        <p style="margin-top:18px;">
-          If you’re a property manager, HOA, or homeowner looking for dependable help, we’d be glad to talk.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 SOS Painting Kitsap. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <div class="float">
-    <a href="tel:3072584287" class="call" aria-label="Call SOS Painting Kitsap">📞</a>
-    <a href="sms:3072584287" class="text" aria-label="Text SOS Painting Kitsap">💬</a>
   </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Quality work. Done on time.</div>
+      <h1>Painting, roof cleaning, and exterior services you can count on</h1>
+
+      <p>We help homeowners and property managers keep properties looking sharp with dependable service and clean results.</p>
+
+      <div class="hero-points">
+        ✔ Fast response for quotes<br>
+        ✔ Professional service<br>
+        ✔ Reliable follow-through
+      </div>
+
+      <div class="top-actions">
+        <a href="#quote" class="btn btn-primary">Get Quote</a>
+        <a href="mailto:sospaintingkitsap@gmail.com" class="btn btn-light">Email</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Services we handle</h3>
+      <ul>
+        <li>Interior and exterior painting</li>
+        <li>Roof cleaning</li>
+        <li>Pressure washing</li>
+        <li>Exterior cleanup work</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card"><h3>Painting</h3><p>Interior and exterior work done clean and professionally.</p></div>
+      <div class="card"><h3>Roof Cleaning</h3><p>Remove buildup and improve curb appeal.</p></div>
+      <div class="card"><h3>Exterior Cleaning</h3><p>Driveways, siding, and outdoor surfaces refreshed.</p></div>
+      <div class="card"><h3>Landscaping Support</h3><p>Cleanup and curb appeal improvements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="trust-grid">
+      <div class="card"><h3>Clear communication</h3><p>Simple and responsive service.</p></div>
+      <div class="card"><h3>Dependable timing</h3><p>We show up and finish on time.</p></div>
+      <div class="card"><h3>Quality work</h3><p>Clean results and attention to detail.</p></div>
+      <div class="card"><h3>Local service</h3><p>Proudly serving Kitsap County.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="card"><h3>1. Contact us</h3><p>Call, text, or submit a quote.</p></div>
+      <div class="card"><h3>2. Get quote</h3><p>We review and respond quickly.</p></div>
+      <div class="card"><h3>3. Get it done</h3><p>We complete the job professionally.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="quote">
+  <div class="container contact-grid">
+
+    <div>
+      <h2>Get a free quote</h2>
+
+      <form action="https://formspree.io/f/xojpnagl" method="POST">
+        <input type="hidden" name="_subject" value="New Lead - SOS Painting Kitsap">
+
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <input type="email" name="email" placeholder="Email (optional)">
+        <textarea name="message" placeholder="What do you need help with?" required></textarea>
+
+        <button class="btn btn-primary" type="submit">Request Quote</button>
+      </form>
+    </div>
+
+    <div class="contact-card">
+      <h3>Contact</h3>
+      <p>📞 307-258-4287</p>
+      <p>📧 sospaintingkitsap@gmail.com</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SOS Painting Kitsap</p>
+</footer>
+
+<div class="float">
+  <a href="tel:3072584287" class="call">📞</a>
+  <a href="sms:3072584287" class="text">💬</a>
+</div>
+
 </body>
 </html>
