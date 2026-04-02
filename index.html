@@ -1,288 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Roof Cleaning & Painting in Bremerton WA | SOS Painting Kitsap</title>
-
-<meta name="description" content="SOS Painting Kitsap provides roof cleaning, painting, pressure washing, and exterior services across Bremerton, Silverdale, Poulsbo, and Kitsap County." />
+<!-- REPLACE your header section with this -->
 
 <style>
-:root {
-  --bg:#ffffff;
-  --text:#1a1a1a;
-  --muted:#616161;
-  --dark:#101010;
-  --accent:#ff6a00;
-  --green:#2f9e44;
-  --line:#e8e8e8;
-  --soft:#f6f6f6;
-  --max:1100px;
-}
-
-* { box-sizing:border-box; }
-
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:var(--text);
-}
-
-.container {
-  width:min(100% - 32px, var(--max));
-  margin:auto;
-}
-
-header {
-  background:rgba(16,16,16,0.85);
-  backdrop-filter:blur(8px);
-  color:white;
-  padding:12px 0;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-
 .topbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 12px;
-  flex-wrap:wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  text-align: center;
 }
 
-.brand { font-weight:bold; }
-
-.btn {
-  padding:12px 16px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 6px 18px rgba(0,0,0,0.2);
-  transition:0.2s;
+.top-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
-.btn:hover { transform:translateY(-2px); }
-
-.btn-primary { background:var(--accent); color:white; }
-.btn-secondary { background:var(--green); color:white; }
-.btn-light { background:white; color:black; }
-
-.hero {
-  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=80') center/cover;
-  color:white;
-  padding:90px 20px;
+header .brand {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
-
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.3fr .9fr;
-  gap:30px;
-  align-items:center;
-}
-
-.hero h1 {
-  font-size:clamp(2.2rem,5vw,3.5rem);
-}
-
-.hero-points { margin:20px 0; }
-
-.hero-card {
-  background:rgba(255,255,255,.1);
-  padding:20px;
-  border-radius:12px;
-}
-
-section { padding:70px 20px; }
-
-.services, .trust-grid, .steps {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.card {
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.2s;
-}
-
-.card:hover {
-  transform:translateY(-5px);
-}
-
-.soft { background:var(--soft); }
-
-.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-
-form {
-  background:white;
-  padding:20px;
-  border-radius:12px;
-}
-
-input, textarea {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-}
-
-.contact-card {
-  background:var(--dark);
-  color:white;
-  padding:20px;
-  border-radius:12px;
-}
-
-footer {
-  background:black;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-
-.small { font-size:.9rem; color:var(--muted); }
-
-@media (max-width:860px) {
-  .hero-grid, .contact-grid {
-    grid-template-columns:1fr;
-  }
-  .topbar {
-    flex-direction:column;
-    text-align:center;
-  }
-}
-
-/* FLOATING BUTTONS */
-.float {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  z-index:999;
-}
-
-.float a {
-  padding:14px;
-  border-radius:50%;
-  font-size:20px;
-  text-align:center;
-  text-decoration:none;
-  color:white;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.float .call { background:var(--accent); }
-.float .text { background:var(--green); }
-
 </style>
-</head>
-
-<body>
 
 <header>
   <div class="container topbar">
+    
     <div>
       <div class="brand">SOS Painting Kitsap</div>
-      <div class="small" style="color:#ccc;">Bremerton • Silverdale • Poulsbo • Kitsap County</div>
+      <div class="small" style="color:#ccc;">
+        Bremerton • Silverdale • Poulsbo • Kitsap County
+      </div>
     </div>
-    <div>
+
+    <div class="top-actions">
       <a href="tel:3072584287" class="btn btn-primary">Call</a>
       <a href="sms:3072584287" class="btn btn-secondary">Text</a>
     </div>
+
   </div>
 </header>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>Roof Cleaning & Painting in Bremerton, Silverdale & Kitsap County</h1>
-      <p>Fast, reliable exterior services you can count on.</p>
-
-      <div class="hero-points">
-        <div>✔ Fast response</div>
-        <div>✔ Clean professional work</div>
-        <div>✔ Reliable service</div>
-      </div>
-
-      <a href="#quote" class="btn btn-primary">Get Quote</a>
-      <a href="mailto:sospaintingkitsap@gmail.com" class="btn btn-light">Email</a>
-    </div>
-
-    <div class="hero-card">
-      <h3>Services</h3>
-      <ul>
-        <li>Painting</li>
-        <li>Roof Cleaning</li>
-        <li>Pressure Washing</li>
-        <li>Exterior Work</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card"><h3>Painting</h3></div>
-      <div class="card"><h3>Roof Cleaning</h3></div>
-      <div class="card"><h3>Pressure Washing</h3></div>
-      <div class="card"><h3>Exterior Cleaning</h3></div>
-    </div>
-  </div>
-</section>
-
-<section class="soft">
-  <div class="container">
-    <h2>Why Choose Us</h2>
-    <div class="trust-grid">
-      <div class="card">Reliable</div>
-      <div class="card">Fast</div>
-      <div class="card">Local</div>
-      <div class="card">Quality Work</div>
-    </div>
-  </div>
-</section>
-
-<section id="quote">
-  <div class="container contact-grid">
-    <div>
-      <h2>Get a Quote</h2>
-      <form action="https://formspree.io/f/mayvlzgn" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="tel" name="phone" placeholder="Phone" required>
-        <textarea name="message" placeholder="What do you need?" required></textarea>
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-
-    <div class="contact-card">
-      <h3>Contact</h3>
-      <p>📞 307-258-4287</p>
-      <p>📧 sospaintingkitsap@gmail.com</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 SOS Painting Kitsap</p>
-</footer>
-
-<div class="float">
-  <a href="tel:3072584287" class="call">📞</a>
-  <a href="sms:3072584287" class="text">💬</a>
-</div>
-
-</body>
-</html>
